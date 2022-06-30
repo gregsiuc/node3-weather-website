@@ -1,5 +1,3 @@
-heroku
-
 
 
 const weatherForm = document.querySelector('form')

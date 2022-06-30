@@ -5,6 +5,7 @@ const getForecast = (longitude, latitude, callback) => {
     const url = 'http://api.weatherstack.com/current?access_key=994ab741fafaee1b4e5741339f710637&query=' + encodeURIComponent(longitude) + ', ' + encodeURIComponent(latitude) + '&units=f'
 
 
+
     request({ url, json: true }, (error, { body }) => {
 
         if (error) {
@@ -15,12 +16,13 @@ const getForecast = (longitude, latitude, callback) => {
 
 
         else {
-
+            console.log(body)
             callback(undefined, body)
         }
 
 
     })
 }
+
 
 module.exports = getForecast
